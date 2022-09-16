@@ -40,6 +40,8 @@ h1 {
 
 @media (min-width  : 768px ) {
     .dos-columnas {
-        display: flex; /*nos da acceso a las propiedades de flex*/
+        display: flex; /*nos da acceso a las propiedades de flex. Por default, todos los elemengos hijo, se muestra de derecha a izq*/
+        justify-content: space-between; /*Alinea de derecha a izq dejando la parte de enmedio libre*/
+        gap: 2rem;
     }
 }
