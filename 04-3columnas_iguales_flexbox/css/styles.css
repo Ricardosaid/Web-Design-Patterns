@@ -41,6 +41,10 @@ h1 {
 @media (min-width : 768px) {
     .tres-columnas {
         display: flex;/*se ordena de izq a derecha */
-        gap: 2rem; /*le damos espacio entre cada articule*/
+        justify-content: space-between;
+    }
+    .entrada-blog {
+        width: calc(33.33% -1rem);
+        margin: 1rem;
     }
 }
