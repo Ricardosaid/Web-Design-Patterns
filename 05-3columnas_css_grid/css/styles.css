@@ -48,4 +48,19 @@ p {
 }
 
 
-/** CODIGO AQUI **/
+@media (min-width:768px){
+    .contenedor-grid { /*elemento padre*/
+        display: grid;
+        grid-template-columns: 20% 60% 20%; /*Podemos usar porcentajes*/
+        grid-template-columns: 1fr 3fr 1fr; /*Podemos usar frs*/
+        grid-auto-flow: column; /*le decimos que el cotenido fluya en columnas*/
+        column-gap: 2rem;
+    }
+
+    .contenido-principal {
+        grid-column: 2 / 3; /*habilitamos el grid en firefox y hubicamos nuestro main content en 2 / 3*/
+    }
+    .sidebar-1 {
+        grid-column: 1 / 2;
+    }
+}
