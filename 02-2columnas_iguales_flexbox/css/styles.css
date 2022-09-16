@@ -38,4 +38,8 @@ h1 {
     text-transform: uppercase;
 }
 
-/** CODIGO AQUI **/
+@media (min-width  : 768px ) {
+    .dos-columnas {
+        display: flex; /*nos da acceso a las propiedades de flex*/
+    }
+}
