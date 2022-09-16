@@ -38,4 +38,19 @@ h1 {
     text-transform: uppercase;
 }
 
-/** CODIGO AQUI **/
+/** Algoritmo
+1) Dispositivo grande 2 columnas, dispositivo movil parte arriba y pate abajo
+2) Agregamos media queries para lo mencionado arriba
+3) Te vas al elemento padre dentro de html, en este caso clase "contenedor"
+4) Creamos una nueva clase para no utilizar la del padre
+ **/
+
+ @media (min-width: 728px) {
+    .dos-Columnas {
+        display: grid;
+
+
+    }
+
+    
+ }
