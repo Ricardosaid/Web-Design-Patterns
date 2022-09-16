@@ -47,9 +47,13 @@ h1 {
 
  @media (min-width: 728px) {
     .dos-Columnas {
-        display: grid;
-
-
+        display: grid; /**Usamos grid Template columns**/
+        grid-template-columns: 50% 50%; /**Primera forma**/
+        grid-template-columns: repeat(2,50%); /**Segunda forma**/
+        grid-template-columns: 1fr 1fr; /**Tercera forma**/
+        grid-template-columns: repeat(2,1fr); /**Cuarta forma**/
+        column-gap: 2rem;
+    
     }
 
     
