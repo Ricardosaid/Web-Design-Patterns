@@ -49,7 +49,7 @@ p {
 
 
 
-@media (min-width:480px) {
+@media (min-width:480px) { /*2 columnas con una fila*/
     .column-drop-css {
         display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -61,6 +61,12 @@ p {
     
 }
 
-@media (min-width:768px) {
+@media (min-width:768px) { /*3 columnas*/
     
+    .column-drop-css {
+        grid-template-columns: repeat(3,1fr);
+    }
+    .segunda {
+        grid-column: 3/4; /*de firefox*/
+    }
 }
