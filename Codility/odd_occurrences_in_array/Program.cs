@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
-int [] A = {0,0,7,1,7};
+int [] A = {9,3,9,3,9,7,9};
 var result = solution(A);
+Console.WriteLine(result);
 static int solution(int [] A)
 {
     var count = 0;
@@ -21,13 +22,9 @@ static int solution(int [] A)
                 helper = A[i];
                 i = tam-1;
             }
-            else
-            {
-                count++;
-            }
         }
         numbers = A.Where(q=>q!=helper).ToArray();
-        
+
         A=numbers;
         tam = A.Length;
         if (tam==1)
