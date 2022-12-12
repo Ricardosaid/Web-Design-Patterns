@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-int[] A = {7, 0, 0, 1, 1,7,3};
+int[] A = {1, 3, 5, 9, 17, 17,9,5,1,1,1,3};
 var result = solution(A);
 Console.WriteLine(result);
 static int solution(int[] A)
@@ -25,14 +25,26 @@ static int solution(int[] A)
         }
         if (flag)
         {
+            flag = false;
             numbers = A.Where(q => q != helper).ToArray();
             A = numbers;
             tam = A.Length;
             if (tam == 1)
             {
-                return (numbers[0]);
+                return (A[0]);
             }
-        } else return (A[0]);
+        } else
+        {
+            if(tam==0)
+            {
+                return 0;
+            }
+            else
+            {
+             return (A[0]);   
+            }
+        }
+        
 
     }
     return (A[0]);
