@@ -24,5 +24,6 @@ Lanzamos en consola en siguiente codigo:
 ```console
 npm run sass
 ```
+4. Para habilitar el watch, agregamos en el nodo scripts del package.json `"sass": "sass --watch src/scss:build/css"`
 
 
