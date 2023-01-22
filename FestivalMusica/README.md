@@ -26,4 +26,17 @@ npm run sass
 ```
 4. Para habilitar el watch, agregamos en el nodo scripts del package.json `"sass": "sass --watch src/scss:build/css"`
 
+## Requerimientos de Gulp
+
+ 1. Instalamos Gulp, lanzando el siguiente codigo
+
+```console
+npm i -D gulp
+```
+<note:-D es igual a dependencias de desarrollo>
+
+2. Creamos el gulpfile es un archivo de configuracion que contiene nuestras tareas
+
+
+
 
