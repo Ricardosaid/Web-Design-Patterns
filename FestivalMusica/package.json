@@ -1,0 +1,26 @@
+{
+  "name": "festivalmusica",
+  "version": "1.0.0",
+  "description": "Proyecto con Gulp, SASS y HTML",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass src/scss:build/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ricardosaid/Web-Design-Patterns.git"
+  },
+  "keywords": [
+    "SASS",
+    "Gulp"
+  ],
+  "author": "SaidLeben",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ricardosaid/Web-Design-Patterns/issues"
+  },
+  "homepage": "https://github.com/Ricardosaid/Web-Design-Patterns#readme",
+  "devDependencies": {
+    "sass": "^1.57.1"
+  }
+}
