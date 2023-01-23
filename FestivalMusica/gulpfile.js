@@ -1,5 +1,5 @@
 // Sacamos source y destination de gulp. El compile lo hacemos con las dependencias via el package.json
-const { src, dest } = require("gulp");
+const { src, dest, watch } = require("gulp");
 // Importamos las funcion de sass
 
 const sass = require("gulp-sass")(require('sass')); 
@@ -25,3 +25,10 @@ function css(done) {
 }
 
 exports.css = css;
+
+function dev(done) {
+    watch("src/scss/app.scss", css);
+    done();
+}
+
+exports.watchDev = dev;

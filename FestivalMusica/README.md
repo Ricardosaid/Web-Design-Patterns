@@ -78,4 +78,15 @@ npx gulp css
 ```
 Con eso compilamos la hoja de estilos de sass
 
+2. Anadiendo un watch al gulpfile
+Importamos la funcion watch de gulp, paar ello, creamos una funcion nueva
+
+```
+watch("ruta del archivo que se va a ejecutar", "nombre de la funcion que se ejecuta ");
+```
+Ejecutamos en consola
+```console
+npx gulp watchDev
+```
+
 
