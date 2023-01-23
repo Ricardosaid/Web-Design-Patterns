@@ -64,4 +64,18 @@ Despues de agregarlo, ejecutamos en consola
 npm run <nombre de la tarea en el package.json>
 ```
 
+## Compilando SASS con Gulp
+
+1.  Necesitamos un conectar entre gulp y sass, para ellos instalamos en terminal
+
+```console
+npm i -D gulp-sass
+```
+Despues ejecutamos
+
+```console
+npx gulp css
+```
+Con eso compilamos la hoja de estilos de sass
+
 
