@@ -28,6 +28,8 @@ npm run sass
 
 ## Requerimientos de Gulp
 
+Gulp es una herramienta para automatizar tareas  y esas tareas son funciones de javascript
+
  1. Instalamos Gulp, lanzando el siguiente codigo
 
 ```console
@@ -35,8 +37,10 @@ npm i -D gulp
 ```
 <note:-D es igual a dependencias de desarrollo>
 
-2. Creamos el gulpfile es un archivo de configuracion que contiene nuestras tareas
-
+2. Creamos el gulpfile, es un archivo de configuracion que contiene nuestras tareas. Ya que tengamos nuestras funciones/tareas en javascript, en la terminal ejecutamos lo siguiente
+```console
+npx gulp <nombre de la tarea>
+```
 
 
 
