@@ -17,7 +17,7 @@ exports.primerTarea = tarea; // cuando mande llamar primer tarea, va a ejecutar 
 //Gulp nos da una api que busca, compila y guarda
 
 function css(done) {
-  src("src/scss/app.scss")//identificar el archivo de sass
+  src("src/scss/**/*.scss")//identificar el archivo de sass
   .pipe(sass())// Compilar las funciones de sass
   .pipe(dest("build/css")); //Almacenarla o guardarla en el disco duro
 
@@ -27,7 +27,7 @@ function css(done) {
 exports.css = css;
 
 function dev(done) {
-    watch("src/scss/app.scss", css);
+    watch("src/scss/**/*.scss", css);
     done();
 }
 

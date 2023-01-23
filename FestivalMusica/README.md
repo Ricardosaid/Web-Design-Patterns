@@ -92,7 +92,14 @@ npx gulp watchDev
 ## Trabajando con SASS
 Para organizar el codigo, creamos dos carpetas `base` y `content` y para que la api de sass no cree dos hojas de estilo agregamos un `_` al incio del archivo.
 
-1. `@forward` solo va a ir en los archivos index, `@use` es para acceder al contenido de una archivo en especial
+1. `@forward` solo va a ir en los archivos index, `@use` es para acceder al contenido de una archivo en especiaL.
+2. `@import` una vez que lo importas en el app.scss lo hace disponible en todos los archivos
+3. `@use` lo hace disponible unicamente donde decidas importarlo
+
+## Compilar todos los archivos sass dentro de un proyecto
+
+1. `**` todas las carpetas
+2. `*` todos los archivos
 
 
 
