@@ -42,5 +42,14 @@ npm i -D gulp
 npx gulp <nombre de la tarea>
 ```
 
+3. Agregamos un callback para que no salga el error de `Did you forget to signal async completition`. Un callback es una funcion que se manda a llamar despues de otra funcion. Era la forma de tener codigo asincrono en js
+
+```
+[18:17:43] Using gulpfile FestivalMusica/gulpfile.js
+[18:17:43] Starting 'primerTarea'...
+First task
+[18:17:43] Finished 'primerTarea' after 2.26 ms
+```
+
 
 
