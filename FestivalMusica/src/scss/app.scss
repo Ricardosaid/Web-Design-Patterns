@@ -1,5 +1,2 @@
-$rojo : rgb(75, 75, 16);
-
-body{
-    background-color: $rojo;
-}
+@use 'base';
+@use 'content';

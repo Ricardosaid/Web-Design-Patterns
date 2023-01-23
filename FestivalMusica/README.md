@@ -89,4 +89,13 @@ Ejecutamos en consola
 npx gulp watchDev
 ```
 
+## Trabajando con SASS
+Para organizar el codigo, creamos dos carpetas `base` y `content` y para que la api de sass no cree dos hojas de estilo agregamos un `_` al incio del archivo.
+
+1. `@forward` solo va a ir en los archivos index, `@use` es para acceder al contenido de una archivo en especial
+
+
+
+
+
 
