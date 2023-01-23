@@ -51,5 +51,17 @@ First task
 [18:17:43] Finished 'primerTarea' after 2.26 ms
 ```
 
+## Mandar llamar una funcion de gulp con npm
+
+1. En este `package.json`, en el nodo de script, agregamos la tareas que vamos a ejecutar.
+
+```
+"tarea":"gulp <nombre de la tarea/funcion en gulp>"
+```
+Despues de agregarlo, ejecutamos en consola
+ 
+```console
+npm run <nombre de la tarea en el package.json>
+```
 
 
