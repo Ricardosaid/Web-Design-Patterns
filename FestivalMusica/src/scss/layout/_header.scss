@@ -1,0 +1,22 @@
+@use 'base/variables' as v;
+
+.header {
+    background-color: v.$verde;
+
+    h1 {
+        color: v.$blanco;
+    }
+}
+
+// La navegacion la hacemos igual de dos niveles
+// el & elimina el espacio al inicio del archivo sass, util para los 
+//pseudoelementos
+.navegacion-principal {
+    a{
+        color: v.$blanco;
+        font-size: 2rem;
+        &:hover {
+            color: v.$amarillo;
+        }
+    }
+}
