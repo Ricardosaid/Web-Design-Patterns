@@ -101,6 +101,14 @@ Para organizar el codigo, creamos dos carpetas `base` y `content` y para que la 
 1. `**` todas las carpetas
 2. `*` todos los archivos
 
+## Correcion cuando escribimos mal el codigo y el watch del build se rompe
+
+1. Instalamos el plugin `gulp-plumber`
+```console
+npm i -D gulp-plumber
+```
+
+
 
 
 

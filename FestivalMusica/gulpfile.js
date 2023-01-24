@@ -4,6 +4,9 @@ const { src, dest, watch } = require("gulp");
 
 const sass = require("gulp-sass")(require('sass')); 
 
+//Importamos plumber
+const plumber = require("gulp-plumber");
+
 // Agregamos un callback
 
 function tarea(cb) {
@@ -18,6 +21,7 @@ exports.primerTarea = tarea; // cuando mande llamar primer tarea, va a ejecutar 
 
 function css(done) {
   src("src/scss/**/*.scss")//identificar el archivo de sass
+  .pipe(plumber())
   .pipe(sass())// Compilar las funciones de sass
   .pipe(dest("build/css")); //Almacenarla o guardarla en el disco duro
 
