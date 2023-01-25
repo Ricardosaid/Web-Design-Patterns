@@ -124,6 +124,10 @@ En el llamado
 ```
 En el caso de que se le pase una variable que no exista, le indicamos `:` y tomara lo seguido en los dos puntos
 
+3. Mixins para los media querys
+
+`@content` lo agregamos dentro del mixin para que lo que agregemos en el header lo inyecte y acepte contenido por bloque
+
 
 
 

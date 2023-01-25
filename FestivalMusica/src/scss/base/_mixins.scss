@@ -1,9 +1,35 @@
-@mixin heading($color : blue, $border-radius:false) {
-    text-transform: uppercase;
-    font-size: 2.4rem;
-    background-color: black;
-    color:$color;
-    @if $border-radius {
-        border-radius: 1rem;
+// @mixin heading($color : blue, $border-radius:false) {
+//     text-transform: uppercase;
+//     font-size: 2.4rem;
+//     background-color: black;
+//     color:$color;
+//     @if $border-radius {
+//         border-radius: 1rem;
+//     }
+// }
+
+@use 'variables' as var;
+
+@mixin phone {
+    @media (min-width:var.$phone) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width:var.$tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width:var.$desktop) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width:var.$desktopXL) {
+        @content;
     }
 }

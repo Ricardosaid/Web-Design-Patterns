@@ -13,6 +13,16 @@
 // el & elimina el espacio al inicio del archivo sass, util para los 
 //pseudoelementos
 .navegacion-principal {
+    background-color: red;
+    @include mix.phone{
+        background-color: v.$morado;
+    }
+    @include mix.tablet {
+        background-color: v.$amarillo;
+    }
+    @include mix.desktop {
+        background-color: v.$negro;
+    }
     a{
         color: v.$blanco;
         font-size: 2rem;
@@ -22,6 +32,7 @@
     }
 }
 
-.prueba{
-    @include mix.heading(v.$amarillo,true);
-}
+// .prueba{
+//     @include mix.heading(v.$amarillo,true);
+// }
+
