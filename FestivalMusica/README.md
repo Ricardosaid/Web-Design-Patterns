@@ -107,7 +107,9 @@ Para organizar el codigo, creamos dos carpetas `base` y `content` y para que la 
 ```console
 npm i -D gulp-plumber
 ```
+## Mixins en SASS
 
+Codigo css que puedes reutilizar en multiples lugares en tu hoja de estilos. En este sentido, podemos utilizar los mixins para botones, los cuales llevan mucho codigo.
 
 
 
