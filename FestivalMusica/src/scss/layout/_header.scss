@@ -23,5 +23,5 @@
 }
 
 .prueba{
-    @include mix.heading;
+    @include mix.heading(v.$amarillo,true);
 }

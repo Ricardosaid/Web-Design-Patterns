@@ -1,5 +1,9 @@
-@mixin heading {
+@mixin heading($color : blue, $border-radius:false) {
     text-transform: uppercase;
     font-size: 2.4rem;
-    color:black;
+    background-color: black;
+    color:$color;
+    @if $border-radius {
+        border-radius: 1rem;
+    }
 }

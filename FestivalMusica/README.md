@@ -109,7 +109,20 @@ npm i -D gulp-plumber
 ```
 ## Mixins en SASS
 
-Codigo css que puedes reutilizar en multiples lugares en tu hoja de estilos. En este sentido, podemos utilizar los mixins para botones, los cuales llevan mucho codigo.
+1. Codigo css que puedes reutilizar en multiples lugares en tu hoja de estilos. En este sentido, podemos utilizar los mixins para botones, los cuales llevan mucho codigo.
+2. Para el uso de mixins que requiera ciertos valores, para que reciba argumentos.
+```
+@mixins heading ($color) {
+
+}
+```
+En el llamado
+```
+.prueba {
+    @include m.heading(v.$amarillo);
+}
+```
+En el caso de que se le pase una variable que no exista, le indicamos `:` y tomara lo seguido en los dos puntos
 
 
 

@@ -372,5 +372,7 @@ h3 {
 .prueba {
   text-transform: uppercase;
   font-size: 2.4rem;
-  color: black;
+  background-color: black;
+  color: #FEF46D;
+  border-radius: 1rem;
 }
