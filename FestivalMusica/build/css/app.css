@@ -359,29 +359,41 @@ h3 {
 }
 .header h1 {
   color: #FFF;
-}
-
-.navegacion-principal {
-  background-color: red;
-}
-@media (min-width: 480px) {
-  .navegacion-principal {
-    background-color: #752F97;
-  }
+  text-align: center;
 }
 @media (min-width: 768px) {
-  .navegacion-principal {
-    background-color: #FEF46D;
+  .header h1 {
+    margin: 0;
   }
 }
-@media (min-width: 1200px) {
+.header .contenido-header {
+  padding: 2rem;
+}
+@media (min-width: 768px) {
+  .header .contenido-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) {
   .navegacion-principal {
-    background-color: #000;
+    display: flex;
+    gap: 2rem;
   }
 }
 .navegacion-principal a {
+  display: block;
+  margin-bottom: 1rem;
+  text-align: center;
   color: #FFF;
   font-size: 2rem;
+}
+@media (min-width: 768px) {
+  .navegacion-principal a {
+    margin: 0;
+  }
 }
 .navegacion-principal a:hover {
   color: #FEF46D;
