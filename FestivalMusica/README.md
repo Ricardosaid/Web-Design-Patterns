@@ -128,6 +128,19 @@ En el caso de que se le pase una variable que no exista, le indicamos `:` y toma
 
 `@content` lo agregamos dentro del mixin para que lo que agregemos en el header lo inyecte y acepte contenido por bloque
 
+## Snippet media query mixins SASS
+
+En vscode buscamos documentos sass snippets y escribimos el siguiente codigo en el json
+```
+"media query":{
+		"prefix": "mq",
+		"body": [
+			"@include m.$1 {\n\t$2\n}"
+		]
+	}
+```
+
+
 
 
 
