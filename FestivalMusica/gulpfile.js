@@ -1,13 +1,12 @@
 // Sacamos source y destination de gulp. El compile lo hacemos con las dependencias via el package.json
-const { src, dest, watch } = require("gulp");
-// Importamos las funcion de sass
+const { src, dest, watch,parallel } = require("gulp");
 
+// Dependencias de css
 const sass = require("gulp-sass")(require('sass')); 
-
-//Importamos plumber
 const plumber = require("gulp-plumber");
 
-// Agregamos un callback
+// Dependencias de imagenes
+const webp = require("gulp-webp");
 
 function tarea(cb) {
   console.log("First task");
@@ -28,11 +27,22 @@ function css(done) {
   done(); // callback que avisa a gulp cuando llegamos al final de la funcion
 }
 
-exports.css = css;
-
-function dev(done) {
-    watch("src/scss/**/*.scss", css);
-    done();
+function versionWebp(done){
+  const opciones = {
+    quality:50
+  };
+  src("src/img/**/*.{png,jpg}") //buscas formatos
+  .pipe(webp(opciones))
+  .pipe(dest('build/img'))
+  done();
 }
 
-exports.watchDev = dev;
+function dev(done) {
+  watch("src/scss/**/*.scss", css);
+  done();
+}
+
+
+exports.css = css;
+exports.version = versionWebp;
+exports.watchDev = parallel(versionWebp,dev);
