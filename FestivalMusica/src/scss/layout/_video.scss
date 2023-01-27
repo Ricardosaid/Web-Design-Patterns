@@ -4,6 +4,7 @@
 .video {
     position: relative;
     max-height: 70rem; // que el video solo ocupe 70 rems y no toda la pantalla
+    min-height: 30rem;
     overflow: hidden;
 
     .overlay {
@@ -17,8 +18,11 @@
         justify-content: center;
     }
     video{
-        width: 100%;
+        width: auto;
         display: block;
+        @include m.desktop {
+            width:100%
+        }
     }
 }
 

@@ -402,6 +402,7 @@ h3 {
 .video {
   position: relative;
   max-height: 70rem;
+  min-height: 30rem;
   overflow: hidden;
 }
 .video .overlay {
@@ -415,8 +416,13 @@ h3 {
   justify-content: center;
 }
 .video video {
-  width: 100%;
+  width: auto;
   display: block;
+}
+@media (min-width: 1200px) {
+  .video video {
+    width: 100%;
+  }
 }
 
 .contenido-video {
