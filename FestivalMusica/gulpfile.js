@@ -9,6 +9,7 @@ const plumber = require("gulp-plumber");
 const cache = require("gulp-cache");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
+const avif = require("gulp-avif");
 
 
 //Gulp nos da una api que busca, compila y guarda
@@ -41,6 +42,15 @@ function versionWebp(done){
   .pipe(dest('build/img'))
   done();
 }
+function versionAvif(done){
+  const opciones = {
+    quality:50
+  };
+  src("src/img/**/*.{png,jpg}") //buscas formatos
+  .pipe(avif(opciones))
+  .pipe(dest('build/img'))
+  done();
+}
 
 function dev(done) {
   watch("src/scss/**/*.scss", css);
@@ -50,5 +60,6 @@ function dev(done) {
 
 exports.css = css;
 exports.version = versionWebp;
+exports.versionAvif = versionAvif;
 exports.imagenes = imagenes;
-exports.watchDev = parallel(imagenes,versionWebp,dev);
+exports.watchDev = parallel(imagenes,versionWebp,versionAvif,dev);
