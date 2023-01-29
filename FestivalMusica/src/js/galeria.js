@@ -74,8 +74,8 @@ function mostrarImagen(id) {
         
         // anadirlo al html
         const body = document.querySelector('body');
-        body.appendChild(overlay);
         body.classList.add('fijar-body');
+        body.appendChild(overlay);
         console.log(imagen);
     
 }
