@@ -42,6 +42,13 @@ function versionWebp(done){
   .pipe(dest('build/img'))
   done();
 }
+
+function javascript(done) {
+  src("src/js/**/galeria.js")
+  .pipe(dest("build/js"))
+  done();
+}
+
 function versionAvif(done){
   const opciones = {
     quality:50
@@ -54,12 +61,14 @@ function versionAvif(done){
 
 function dev(done) {
   watch("src/scss/**/*.scss", css);
+  watch("src/js/**/galeria.js", javascript);
   done();
 }
 
 
 exports.css = css;
+exports.js = javascript;
 exports.version = versionWebp;
 exports.versionAvif = versionAvif;
 exports.imagenes = imagenes;
-exports.watchDev = parallel(imagenes,versionWebp,versionAvif,dev);
+exports.watchDev = parallel(imagenes,versionWebp,versionAvif,javascript,dev);
