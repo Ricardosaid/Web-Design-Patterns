@@ -3,6 +3,7 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 *.vscode
+*.idea
 # User-specific files
 *.rsuser
 *.suo
@@ -347,3 +348,11 @@ healthchecksdb
 
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 MigrationBackup/
+
+.DS_Store
+
+FestivalMusica/package-lock.json
+
+FestivalMusica/build/img/grande/
+
+FestivalMusica/build/img/

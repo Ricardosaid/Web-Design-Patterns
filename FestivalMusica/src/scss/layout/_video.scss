@@ -1,0 +1,46 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.video {
+    position: relative;
+    max-height: 70rem; // que el video solo ocupe 70 rems y no toda la pantalla
+    min-height: 30rem;
+    overflow: hidden;
+
+    .overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: rgb(61,34,195);
+        background: linear-gradient(0deg, rgba(61,34,195,0.7) 0%, rgba(4,4,4,0.2) 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    video{
+        width: auto;
+        display: block;
+        @include m.desktop {
+            width:100%
+        }
+    }
+}
+
+.contenido-video {
+    z-index: 1; // para mandar hacia afuera el bloque absoluto overlay
+    h2 {
+        color: v.$blanco;
+        font-size: 4.3rem;
+        margin: 0;
+    }
+    p {
+        background-color: v.$rosa;
+        display: inline-block; //toma el espacio que requiere unicamente
+        padding: 1rem 0.5rem;
+        color: v.$blanco;
+        font-weight: 700;
+        font-size: 1.8rem;
+        margin: 0;
+
+    }
+}
