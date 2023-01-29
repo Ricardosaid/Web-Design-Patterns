@@ -44,12 +44,30 @@ function mostrarImagen(id) {
             alt="imagen galeria"
           />
         `;
+
+        
+        //crea el overlay con la imagen 
         const overlay = document.createElement('DIV');
         overlay.appendChild(imagen);
         overlay.classList.add('overlay');
+
+        //botonn para cerrar la ventana modal
+        const cerrarModal = document.createElement('P')
+        cerrarModal.textContent = 'X';
+        cerrarModal.classList.add('btn-cerrar');
+        cerrarModal.onclick = function() {
+          const body = document.querySelector('body');
+          body.classList.remove('fijar-body');
+          console.log(imagen);
+          overlay.remove(); 
+        }
+
+        overlay.appendChild(cerrarModal);
         
+        // anadirlo al html
         const body = document.querySelector('body');
         body.appendChild(overlay);
+        body.classList.add('fijar-body');
         console.log(imagen);
     
 }
