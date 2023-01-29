@@ -230,6 +230,9 @@ npm i -D gulp-sourcemaps
 npm i -D gulp-terser-js
 ```
 
+2. Utilizamos el sourcemaps para que la lectura sea legible en el browser
+
+
 
 
 

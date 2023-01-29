@@ -56,7 +56,9 @@ function versionWebp(done){
 
 function javascript(done) {
   src("src/js/**/galeria.js")
+  .pipe(sourcemaps.init())
   .pipe(terser())
+  .pipe(sourcemaps.write('.')) //en la misma carpeta de js
   .pipe(dest("build/js"))
   done();
 }
