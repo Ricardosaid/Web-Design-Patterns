@@ -184,7 +184,21 @@ Agregamos el `loading="lazy"` para reducir el timpo de carga
         font-size: 1.5rem;
     }
 }
-``
+```
+
+## Behavior smooth
+
+1. Prevenir el comporatmiento por default y despues mandar llamar `scrollIntoView`
+
+```
+enlace.addEventListener('click', function(e){
+      e.preventDefault();
+      const sectionScroll = e.target.attributes.href.value;
+        const section = document.querySelector(sectionScroll);
+        section.scrollIntoView({behavior:'smooth'});
+     });
+```
+
 
 
 

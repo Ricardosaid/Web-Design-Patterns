@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function iniciarApp() {
   crearGaleria();
+  scrollNav();
 }
 
 function crearGaleria() {
@@ -78,4 +79,16 @@ function mostrarImagen(id) {
         body.appendChild(overlay);
         console.log(imagen);
     
+}
+
+function scrollNav() {
+  const enlaces = document.querySelectorAll('.navegacion-principal a');
+  enlaces.forEach(enlace => {
+     enlace.addEventListener('click', function(e){
+      e.preventDefault();
+      const sectionScroll = e.target.attributes.href.value;
+        const section = document.querySelector(sectionScroll);
+        section.scrollIntoView({behavior:'smooth'});
+     });
+  })
 }
