@@ -140,6 +140,23 @@ En vscode buscamos documentos sass snippets y escribimos el siguiente codigo en 
 	}
 ```
 
+## Mostrar imagenes Avif, Webp o un fallback
+
+1. Primero mostrar la imagen mas ligera, que seria avif (soporte menor)
+2. Despues mostrar la webp (soportada en edge)
+
+```
+<picture>
+          <source srcset="build/img/imagen_vocalista.avif" type="image/avif">
+          <source srcset="build/img/imagen_vocalista.webp" type="image/webp">
+          <img src="build/img/imagen_vocalista.jpg" alt="imagen vocalista">
+</picture>
+```
+3. Al trabajar con un mejor performance, se recomienda poner este snippet en la etiqueta `img` ya que muestra rapidamente las imagenes
+```
+<img width="200" height="300" src="build/img/imagen_vocalista.jpg" alt="imagen vocalista">
+```
+Agregamos el `loading="lazy"` para reducir el timpo de carga
 
 
 
