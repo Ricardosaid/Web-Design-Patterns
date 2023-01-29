@@ -223,6 +223,12 @@ npm i -D cssnano autoprefixer postcss gulp-postcss
 npm i -D gulp-sourcemaps
 ```
 
+## Mejorando el performance de js
+
+1. Instalamos terser 
+```console
+npm i -D gulp-terser-js
+```
 
 
 

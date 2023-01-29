@@ -15,6 +15,10 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const avif = require("gulp-avif");
 
+//javascript
+const terser = require('gulp-terser-js');
+
+
 
 //Gulp nos da una api que busca, compila y guarda
 
@@ -52,6 +56,7 @@ function versionWebp(done){
 
 function javascript(done) {
   src("src/js/**/galeria.js")
+  .pipe(terser())
   .pipe(dest("build/js"))
   done();
 }
