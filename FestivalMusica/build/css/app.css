@@ -686,3 +686,14 @@ img {
   color: #FFF;
   font-size: 2.4rem;
 }
+
+.site-footer {
+  background-color: #ea94cd;
+  padding: 1rem;
+}
+.site-footer p {
+  margin: 0;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #FFF;
+}

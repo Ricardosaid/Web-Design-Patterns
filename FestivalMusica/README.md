@@ -171,6 +171,21 @@ Agregamos el `loading="lazy"` para reducir el timpo de carga
 	}
 ```
 
+## Footer padding
+1. El `p` tiene muco padding, para quitarlo le agregamos un `margin:0;`
+
+```
+.site-footer{
+    background-color: v.$rosa;
+    padding: 1rem;
+    p{
+        margin: 0;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+}
+``
+
 
 
 
