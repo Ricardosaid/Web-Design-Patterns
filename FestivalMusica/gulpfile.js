@@ -4,6 +4,10 @@ const { src, dest, watch,parallel } = require("gulp");
 // Dependencias de css
 const sass = require("gulp-sass")(require('sass')); 
 const plumber = require("gulp-plumber");
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+const postcss = require('gulp-postcss');
+const sourcemaps = require('gulp-sourcemaps');
 
 // Dependencias de imagenes
 const cache = require("gulp-cache");
@@ -16,9 +20,12 @@ const avif = require("gulp-avif");
 
 function css(done) {
   src("src/scss/**/*.scss")//identificar el archivo de sass
+  .pipe(sourcemaps.init()) // inicializamos el sourcemapscon la hoja de estilos que va a compilar
   .pipe(plumber())
   .pipe(sass())// Compilar las funciones de sass
-  .pipe(dest("build/css")); //Almacenarla o guardarla en el disco duro
+  .pipe(postcss([autoprefixer(),cssnano()]))
+  .pipe(sourcemaps.write('.')) // se guarde en la misma ubicacion de la hoja de archivo de css
+  .pipe(dest("build/css")) //Almacenarla o guardarla en el disco duro
 
   done(); // callback que avisa a gulp cuando llegamos al final de la funcion
 }

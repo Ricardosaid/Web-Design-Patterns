@@ -208,6 +208,22 @@ enlace.addEventListener('click', function(e){
     }
 ```
 
+## Mejorando el performance del css
+
+Instalamos cssnano, autoprefixer, postcss, gulp-postcss
+```console
+npm i -D cssnano autoprefixer postcss gulp-postcss
+```
+
+1. Autoprefixer nos va a yudar a que si las ultimas caracteristicas de css no son soportadas por el nnavegador, toma las funcionales
+
+2. Cuando minificamos el codigo de css, se complica modificar el archivo porque esta comprimido en una sola linea, para solucionarlo, utilizamos `sourcemaps`
+
+```console
+npm i -D gulp-sourcemaps
+```
+
+
 
 
 
