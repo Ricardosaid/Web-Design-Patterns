@@ -350,3 +350,9 @@ healthchecksdb
 MigrationBackup/
 
 .DS_Store
+
+FestivalMusica/package-lock.json
+
+FestivalMusica/build/img/grande/
+
+FestivalMusica/build/img/
