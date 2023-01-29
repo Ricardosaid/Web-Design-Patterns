@@ -48,6 +48,16 @@
     background-image: url(../img/icono_rock.png);
 }
 
+.calendario {
+    @include m.resetear-lista;
+    li{
+        padding: 2.5rem;
+        font-weight: 900;
+        span{
+            font-weight: 400;
+        }
+    }
+}
 
 .bg-amarillo{
     background-color: v.$amarillo;
