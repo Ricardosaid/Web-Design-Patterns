@@ -157,6 +157,19 @@ En vscode buscamos documentos sass snippets y escribimos el siguiente codigo en 
 <img width="200" height="300" src="build/img/imagen_vocalista.jpg" alt="imagen vocalista">
 ```
 Agregamos el `loading="lazy"` para reducir el timpo de carga
+4. El snippet para de imagenes en html
+```
+"imagenes" : {
+		"prefix": "im",
+		"body": [
+			 "<picture>",
+			 	"\t<source srcset=\"$1.avif\" type=\"image/avif\">",
+				"\t<source srcset=\"$1.webp\" type=\"image/webp\">",
+				"\t<img loading=\"lazy\" width=\"200\" height=\"300\" src=\"$1.jpg\" alt=\"$2\">",
+			 "</picture>"
+		]
+	}
+```
 
 
 
