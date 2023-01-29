@@ -22,5 +22,6 @@ function crearGaleria() {
           />
         `;
         galeria.appendChild(imagen);
+        console.log(imagen);
   }
 }
