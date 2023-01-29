@@ -106,11 +106,11 @@ function navegacionFija() {
     console.log(sobreFestival.getBoundingClientRect());
     if (sobreFestival.getBoundingClientRect().top <= 0) {
       barra.classList.add('fijo');
-      //body.classList.add('fijo');
+      body.classList.add('body-scroll');
     }
     else{
       barra.classList.remove('fijo');
-      //body.classList.remove('fijo');
+      body.classList.remove('body-scroll');
     }
   })
 }

@@ -199,6 +199,14 @@ enlace.addEventListener('click', function(e){
      });
 ```
 
+## Header flotante evitar que el contenido del body se mueva
+
+1. Se hace un salto de linea por flotar el header, medimos el padding del header y ese es el que agregamos cuando se cumpla el `getBoundingClientRect()` 
+```
+&.body-scroll{
+        padding-top: 8.6rem; //tamano del header
+    }
+```
 
 
 
