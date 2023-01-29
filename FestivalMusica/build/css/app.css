@@ -496,7 +496,7 @@ img {
 }
 .lineup .dia {
   text-transform: uppercase;
-  margin-bottom: 5rem;
+  margin: 5rem 0;
 }
 
 @media (min-width: 768px) {
@@ -548,7 +548,13 @@ img {
 .bg-amarillo {
   background-color: #FEF46D;
 }
+.bg-amarillo li:nth-child(odd) {
+  background-color: #fdee21;
+}
 
 .bg-verde {
   background-color: #4CB8B3;
+}
+.bg-verde li:nth-child(odd) {
+  background-color: #348380;
 }
